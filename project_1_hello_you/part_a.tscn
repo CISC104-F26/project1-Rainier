@@ -2,281 +2,369 @@
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3k1io"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6jki"]
+albedo_color = Color(0.42493117, 0.42493087, 0.42493078, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_3k1io"]
 size = Vector3(0.2529297, 1, 2.0039063)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_to4tk"]
+albedo_color = Color(0.47918278, 0.47918278, 0.47918278, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_1v27e"]
 size = Vector3(0.1953125, 0.6036377, 36.956055)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6bo7"]
+albedo_color = Color(0.5211406, 0.5211406, 0.5211405, 1)
+metallic = 0.91
+roughness = 0.26
+
 [sub_resource type="BoxMesh" id="BoxMesh_ndkmt"]
 size = Vector3(4.742111, 0.059570313, 0.2987671)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7awo"]
+albedo_color = Color(0.33350652, 0.16881701, 3.128499e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eso0h"]
+albedo_color = Color(0.5211406, 0.5211406, 0.5211405, 1)
+metallic = 0.91
+roughness = 0.26
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j0tu7"]
+albedo_color = Color(0.33333334, 0.16862746, 0, 1)
 
 [node name="Part_A" type="Node3D" unique_id=2060501816]
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=633183389]
 transform = Transform3D(16.14036, 0, 0, 0, 1.3713965, 0, 0, 0, 18.42071, 0, 0, 0)
 mesh = SubResource("PlaneMesh_3k1io")
+surface_material_override/0 = SubResource("StandardMaterial3D_m6jki")
 
 [node name="LeftRidge" type="MeshInstance3D" parent="Floor" unique_id=578824155]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0621331, 0.48991057, -0.00683593)
 mesh = SubResource("BoxMesh_3k1io")
+surface_material_override/0 = SubResource("StandardMaterial3D_to4tk")
 
-[node name="RightRidge" type="MeshInstance3D" parent="Floor" unique_id=1041981044]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0822877, 0.48991057, -0.00683593)
+[node name="RightRidge" type="MeshInstance3D" parent="Floor/LeftRidge" unique_id=1041981044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1444206, 0, 0)
 mesh = SubResource("BoxMesh_3k1io")
 
 [node name="OutsideRailingLeft" type="MeshInstance3D" parent="." unique_id=639312479]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.269461, -0.19818115, -0.010498047)
 mesh = SubResource("BoxMesh_1v27e")
+surface_material_override/0 = SubResource("StandardMaterial3D_q6bo7")
 
 [node name="OutsideRailing2" type="MeshInstance3D" parent="OutsideRailingLeft" unique_id=1039236016]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.122628, 0, 0)
 mesh = SubResource("BoxMesh_1v27e")
+surface_material_override/0 = SubResource("StandardMaterial3D_q6bo7")
 
 [node name="InsideRailingLeft" type="MeshInstance3D" parent="." unique_id=1882395037]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.218443, 0.037670135, 0.35061646)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing18" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1621405543]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6812124)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing19" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=512084042]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1403275)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing20" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=988482553]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.4280176)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing21" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1734676602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.0952864)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing22" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1580277689]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.2353272)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing23" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1558473519]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.629617)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing24" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=396753965]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.131682)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing25" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1140223974]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.606569)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing26" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=313755402]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.238665)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing27" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=797688202]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.389511)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing28" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=653776465]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.693347)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing29" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=131337591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.052973)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing30" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=279296954]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.10561)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing2" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1608945763]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.2829652)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing3" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=784639003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4399505)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing4" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1594392263]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5446153)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing5" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=507816383]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.675465)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing6" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=985504479]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.6785226)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing7" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=991239289]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.531754)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing8" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1615848450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.510608)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing9" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1684312874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.764532)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing10" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1913853195]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.841714)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing11" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=666101055]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.968798)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing12" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=2039248700]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.020045)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing13" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=1815681154]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.120652)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing14" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=312912786]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14.196311)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing15" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=560538497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.2217245)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing16" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=435862950]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.473797)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="InsideRailing17" type="MeshInstance3D" parent="InsideRailingLeft" unique_id=421002596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.501097)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="OutsideRailingRight" type="MeshInstance3D" parent="." unique_id=524050200]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.62041, -0.19818115, -0.010498047)
 mesh = SubResource("BoxMesh_1v27e")
+surface_material_override/0 = SubResource("StandardMaterial3D_eso0h")
 
 [node name="OutsideRailing2" type="MeshInstance3D" parent="OutsideRailingRight" unique_id=1114878252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.122628, 0, 0)
 mesh = SubResource("BoxMesh_1v27e")
+surface_material_override/0 = SubResource("StandardMaterial3D_eso0h")
 
 [node name="InsideRailingRight" type="MeshInstance3D" parent="." unique_id=336654308]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.671428, 0.037670135, 0.35061646)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing18" type="MeshInstance3D" parent="InsideRailingRight" unique_id=945143633]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6812124)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing19" type="MeshInstance3D" parent="InsideRailingRight" unique_id=500338945]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1403275)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing20" type="MeshInstance3D" parent="InsideRailingRight" unique_id=733892659]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.4280176)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing21" type="MeshInstance3D" parent="InsideRailingRight" unique_id=435074970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.0952864)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing22" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1834573867]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.2353272)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing23" type="MeshInstance3D" parent="InsideRailingRight" unique_id=307529496]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.629617)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing24" type="MeshInstance3D" parent="InsideRailingRight" unique_id=651321381]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.131682)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing25" type="MeshInstance3D" parent="InsideRailingRight" unique_id=830919045]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.606569)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing26" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1242518089]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.238665)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing27" type="MeshInstance3D" parent="InsideRailingRight" unique_id=545926818]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.389511)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing28" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1266846465]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.693347)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing29" type="MeshInstance3D" parent="InsideRailingRight" unique_id=565633869]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.052973)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing30" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1684328001]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.10561)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing2" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1423604255]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.2829652)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing3" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1366367552]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4399505)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing4" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1511802778]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5446153)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing5" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1755829004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.675465)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing6" type="MeshInstance3D" parent="InsideRailingRight" unique_id=332759162]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.6785226)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing7" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1507992694]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.531754)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing8" type="MeshInstance3D" parent="InsideRailingRight" unique_id=928290908]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.510608)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing9" type="MeshInstance3D" parent="InsideRailingRight" unique_id=762110307]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.764532)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing10" type="MeshInstance3D" parent="InsideRailingRight" unique_id=66430226]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.841714)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing11" type="MeshInstance3D" parent="InsideRailingRight" unique_id=907636646]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.968798)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing12" type="MeshInstance3D" parent="InsideRailingRight" unique_id=138576714]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.020045)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing13" type="MeshInstance3D" parent="InsideRailingRight" unique_id=514548397]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.120652)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing14" type="MeshInstance3D" parent="InsideRailingRight" unique_id=441400258]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14.196311)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing15" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1309285175]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.2217245)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing16" type="MeshInstance3D" parent="InsideRailingRight" unique_id=1377830412]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.473797)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="InsideRailing17" type="MeshInstance3D" parent="InsideRailingRight" unique_id=462453581]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.501097)
 mesh = SubResource("BoxMesh_ndkmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
