@@ -8,6 +8,24 @@ height = 0.0635376
 [sub_resource type="CylinderMesh" id="CylinderMesh_1v27e"]
 height = 0.1616211
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_ndkmt"]
+top_radius = 0.107910156
+bottom_radius = 0.107910156
+height = 0.84213257
+
+[sub_resource type="BoxMesh" id="BoxMesh_3k1io"]
+size = Vector3(0.29492188, 0.25076294, 0.28527832)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1yqvk"]
+top_radius = 0.10205078
+bottom_radius = 0.10205078
+height = 1.1791992
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_353kr"]
+top_radius = 0.140625
+bottom_radius = 0.140625
+height = 0.13342285
+
 [node name="Part_B" type="Node3D" unique_id=970916361]
 
 [node name="BottomPlate" type="MeshInstance3D" parent="." unique_id=720066643]
@@ -21,3 +39,19 @@ mesh = SubResource("CylinderMesh_1v27e")
 [node name="RightWheel" type="MeshInstance3D" parent="." unique_id=1263853417]
 transform = Transform3D(1, 0, 0, 0, -0.004786994, -0.99998856, 0, 0.99998856, -0.004786994, 0, 0.07290715, -0.5204245)
 mesh = SubResource("CylinderMesh_1v27e")
+
+[node name="MiddleAttachment" type="MeshInstance3D" parent="." unique_id=309883635]
+transform = Transform3D(1, 0, 0, 0, -0.0034042764, -0.9999942, 0, 0.9999942, -0.0034042764, 0, 0.45812574, -0.03237413)
+mesh = SubResource("CylinderMesh_ndkmt")
+
+[node name="CubeAttachment" type="MeshInstance3D" parent="MiddleAttachment" unique_id=2020166933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0030822754, 0.0018469691, -0.006527096)
+mesh = SubResource("BoxMesh_3k1io")
+
+[node name="CannonTube" type="MeshInstance3D" parent="." unique_id=285561170]
+transform = Transform3D(0.29647365, 0.95504105, 0, -0.95504105, 0.29647365, 0, 0, 0, 1, 0.07597652, 0.62058955, -0.050037384)
+mesh = SubResource("CylinderMesh_1yqvk")
+
+[node name="TopCannonPiece" type="MeshInstance3D" parent="." unique_id=1112406418]
+transform = Transform3D(0.37011573, 0.92890173, -0.012485817, -0.9234667, 0.3693465, 0.10388653, 0.101112, -0.026919812, 0.9945108, 0.5986383, 0.7897518, -0.049706876)
+mesh = SubResource("CylinderMesh_353kr")
