@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://jtxq5ribap12"]
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_3k1io"]
+top_radius = 0.8330078
+bottom_radius = 0.8330078
+height = 0.0635376
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1v27e"]
+height = 0.1616211
+
 [node name="Part_B" type="Node3D" unique_id=970916361]
+
+[node name="BottomPlate" type="MeshInstance3D" parent="." unique_id=720066643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08948809, 0)
+mesh = SubResource("CylinderMesh_3k1io")
+
+[node name="LeftWheel" type="MeshInstance3D" parent="." unique_id=413654566]
+transform = Transform3D(1, 0, 0, 0, -0.004786994, -0.99998856, 0, 0.99998856, -0.004786994, 0, 0.07290715, 0.4592896)
+mesh = SubResource("CylinderMesh_1v27e")
+
+[node name="RightWheel" type="MeshInstance3D" parent="." unique_id=1263853417]
+transform = Transform3D(1, 0, 0, 0, -0.004786994, -0.99998856, 0, 0.99998856, -0.004786994, 0, 0.07290715, -0.5204245)
+mesh = SubResource("CylinderMesh_1v27e")
