@@ -123,7 +123,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=633183389]
-transform = Transform3D(13.520795, 0, 0, 0, 1.3713965, 0, 0, 0, 18.42071, 0.20982265, 0, 0)
+transform = Transform3D(13.520795, 0, 0, 0, 1.3713965, 0, 0, 0, 18.42071, 0.20982265, 0, -11.2026615)
 mesh = SubResource("PlaneMesh_3k1io")
 surface_material_override/0 = SubResource("StandardMaterial3D_m6jki")
 
@@ -137,11 +137,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1444206, 0, 0)
 mesh = SubResource("BoxMesh_3k1io")
 
 [node name="RightArm" type="MeshInstance3D" parent="Floor" unique_id=1377483757]
-transform = Transform3D(0.99997437, 0.0071485424, -0.00016287198, -0.0071503986, 0.9997149, -0.022777444, 0, 0.02277803, 0.99974006, -0.042978726, 1.2063872, -0.0026497222)
+transform = Transform3D(0.99997437, 0.0071485424, -0.00016287198, -0.0071503986, 0.99971485, -0.022777444, 0, 0.02277803, 0.99974006, -0.042978726, 1.2063872, 0.60541195)
 mesh = SubResource("CylinderMesh_1yqvk")
 
 [node name="OutsideRailingLeft" type="MeshInstance3D" parent="." unique_id=639312479]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.546636, -0.19818115, -0.010498047)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.546636, -0.19818115, -11.21316)
 mesh = SubResource("BoxMesh_1v27e")
 surface_material_override/0 = SubResource("StandardMaterial3D_q6bo7")
 
@@ -151,7 +151,7 @@ mesh = SubResource("BoxMesh_1v27e")
 surface_material_override/0 = SubResource("StandardMaterial3D_q6bo7")
 
 [node name="InsideRailingLeft" type="MeshInstance3D" parent="." unique_id=1882395037]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.495618, 0.037670135, 0.35061646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.495618, 0.037670135, -10.852045)
 mesh = SubResource("BoxMesh_ndkmt")
 surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
@@ -301,7 +301,7 @@ mesh = SubResource("BoxMesh_ndkmt")
 surface_material_override/0 = SubResource("StandardMaterial3D_e7awo")
 
 [node name="OutsideRailingRight" type="MeshInstance3D" parent="." unique_id=524050200]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.604759, -0.19818115, -0.010498047)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.604759, -0.19818115, -11.21316)
 mesh = SubResource("BoxMesh_1v27e")
 surface_material_override/0 = SubResource("StandardMaterial3D_eso0h")
 
@@ -311,7 +311,7 @@ mesh = SubResource("BoxMesh_1v27e")
 surface_material_override/0 = SubResource("StandardMaterial3D_eso0h")
 
 [node name="InsideRailingRight" type="MeshInstance3D" parent="." unique_id=336654308]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.655777, 0.037670135, 0.35061646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.655777, 0.037670135, -10.852045)
 mesh = SubResource("BoxMesh_ndkmt")
 surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
@@ -461,7 +461,7 @@ mesh = SubResource("BoxMesh_ndkmt")
 surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="BottomPlate" type="MeshInstance3D" parent="." unique_id=2115018812]
-transform = Transform3D(-0.99999434, 0, -0.0033577934, 0, 1, 0, 0.0033577934, 0, -0.99999434, -4.5930233, 0.08948809, -7.3222656)
+transform = Transform3D(-0.99999434, 0, -0.0033577934, 0, 1, 0, 0.0033577934, 0, -0.99999434, -3.655447, 0.08948809, -5.9372106)
 mesh = SubResource("CylinderMesh_m6jki")
 
 [node name="LeftWheel" type="MeshInstance3D" parent="BottomPlate" unique_id=1828287114]
@@ -543,4 +543,4 @@ offset_right = -663.0
 offset_bottom = 218.0
 
 [node name="Camera3D" type="Camera3D" parent="Part_C" unique_id=318385016]
-transform = Transform3D(0.93423426, 0, -0.35665995, 0, 1, 0, 0.35665995, 0, 0.93423426, -0.5323721, 1.752991, 1.3332027)
+transform = Transform3D(0.93423426, 0, -0.35665995, 0, 1, 0, 0.35665995, 0, 0.93423426, -0.5323721, 1.8521659, 1.561644)
