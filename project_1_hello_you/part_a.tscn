@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cd2yhtj4c7iyw"]
 
+[ext_resource type="PackedScene" uid="uid://c2lgg2dly1ay" path="res://part_c.tscn" id="1_ys316"]
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_3k1io"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6jki"]
@@ -441,7 +443,7 @@ mesh = SubResource("BoxMesh_ndkmt")
 surface_material_override/0 = SubResource("StandardMaterial3D_j0tu7")
 
 [node name="BottomPlate" type="MeshInstance3D" parent="." unique_id=2115018812]
-transform = Transform3D(-0.99999434, 0, -0.0033577934, 0, 1, 0, 0.0033577934, 0, -0.99999434, -4.5930233, 0.08948809, 0)
+transform = Transform3D(-0.99999434, 0, -0.0033577934, 0, 1, 0, 0.0033577934, 0, -0.99999434, -4.5930233, 0.08948809, -7.3222656)
 mesh = SubResource("CylinderMesh_m6jki")
 
 [node name="LeftWheel" type="MeshInstance3D" parent="BottomPlate" unique_id=1828287114]
@@ -515,3 +517,12 @@ mesh = SubResource("CylinderMesh_46j1s")
 [node name="LeftLeg" type="MeshInstance3D" parent="." unique_id=844031258]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16767138, 0.39453125, 0)
 mesh = SubResource("CylinderMesh_46j1s")
+
+[node name="Part_C" parent="." unique_id=1842323565 instance=ExtResource("1_ys316")]
+offset_left = -663.0
+offset_top = 218.0
+offset_right = -663.0
+offset_bottom = 218.0
+
+[node name="Camera3D" type="Camera3D" parent="Part_C" unique_id=318385016]
+transform = Transform3D(0.93423426, 0, -0.35665995, 0, 1, 0, 0.35665995, 0, 0.93423426, -0.5323721, 1.752991, 1.3332027)

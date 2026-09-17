@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://c2lgg2dly1ay"]
 
+[ext_resource type="Texture2D" uid="uid://be47nsvg0v2i1" path="res://icon.svg" id="1_3seef"]
+[ext_resource type="Texture2D" uid="uid://dr0wjn26vhlgq" path="res://SLlogo.webp" id="2_tlj50"]
+
 [node name="Part_C" type="Control" unique_id=1842323565]
 layout_mode = 3
 anchors_preset = 15
@@ -10,10 +13,10 @@ grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1083034028]
 layout_mode = 0
-offset_left = 835.0
-offset_top = -65.0
-offset_right = 1994.0
-offset_bottom = 585.0
+offset_left = 759.0
+offset_top = -224.0
+offset_right = 1918.0
+offset_bottom = 426.0
 theme_override_font_sizes/normal_font_size = 20
 vertical_alignment = 1
 
@@ -22,18 +25,28 @@ layout_mode = 0
 offset_left = -4.0
 offset_right = 687.0
 offset_bottom = 210.0
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 25
 text = "Roxxie Rainier"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=932456071]
 layout_mode = 0
-offset_left = 764.0
-offset_top = -6.0
-offset_right = 1254.0
-offset_bottom = 74.0
-theme_override_font_sizes/normal_font_size = 29
+offset_left = 686.0
+offset_top = -165.0
+offset_right = 1176.0
+offset_bottom = -85.0
+theme_override_font_sizes/normal_font_size = 22
 text = "My favorite show is Attack on Titan
 
 "
 fit_content = true
 autowrap_mode = 0
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2059635366]
+position = Vector2(914, -84.999985)
+scale = Vector2(0.43822595, 0.48827887)
+texture = ExtResource("1_3seef")
+
+[node name="ScoutsLogo" type="Sprite2D" parent="." unique_id=961828535]
+position = Vector2(767.00006, -79)
+scale = Vector2(0.16071582, 0.15133692)
+texture = ExtResource("2_tlj50")
