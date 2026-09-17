@@ -10,11 +10,30 @@ grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1083034028]
 layout_mode = 0
-offset_right = 1159.0
-offset_bottom = 650.0
+offset_left = 835.0
+offset_top = -65.0
+offset_right = 1994.0
+offset_bottom = 585.0
 theme_override_font_sizes/normal_font_size = 20
-text = "Add more labels, images, and other Control nodes to this scene to build your personal poster for Part C.
-
-Remember that you may need to scroll down to \"Theme Overrides > Font Sizes\" in the Inspector 
-to make your labels big enough to read. (This is font size 20px, for reference)."
 vertical_alignment = 1
+
+[node name="Label" type="Label" parent="RichTextLabel" unique_id=1528125795]
+layout_mode = 0
+offset_left = -4.0
+offset_right = 687.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 40
+text = "Roxxie Rainier"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=932456071]
+layout_mode = 0
+offset_left = 764.0
+offset_top = -6.0
+offset_right = 1254.0
+offset_bottom = 74.0
+theme_override_font_sizes/normal_font_size = 29
+text = "My favorite show is Attack on Titan
+
+"
+fit_content = true
+autowrap_mode = 0
